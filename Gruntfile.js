@@ -7,15 +7,27 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', 'js/**/*.js']
     },
 
-    compass: {
-      dist: {
+    sass: {
+      prod: {
         options: {
-          sassDir: 'sass',
-          cssDir: 'css',
-          relativeAssets: true
+          style: 'compressed',
+          sourcemap: 'none'
+        },
+        files: {
+          'css/style.css': 'sass/style.scss'
+        }
+      },
+      dev: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'auto'
+        },
+        files: {
+          'css/style.css': 'sass/style.scss'
         }
       }
     },
+
 
     watch: {
       files: ['Gruntfile.js', 'js/**/*.js', 'sass/**/*.scss'],
@@ -25,8 +37,8 @@ module.exports = function(grunt) {
 
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('default', ['compass', 'watch']);
+  grunt.registerTask('default', ['sass:dev', 'watch']);
 
 };

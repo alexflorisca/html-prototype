@@ -1,0 +1,13 @@
+/**
+ * _functions.scss
+ *
+ * Any functions used in this project
+ */
+
+
+/**
+ * Convert pixels to ems
+ */
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem
+}

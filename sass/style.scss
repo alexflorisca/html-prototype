@@ -1,3 +1,21 @@
+/**
+ * style.scss
+ *
+ * Main stylesheet.
+ *
+ */
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+// Using 
+@import "foundation";
+
 body {
   font-size: 20px;
+}
+
+h1 {
+  font-size: rem(40px);
 }
