@@ -1,0 +1,10 @@
+# Currently supported browsers
+
+# All browsers with more than 1% usage according to global usage statstics (Can I Use)
+> 1%
+
+# Support the last two versions of the latest browsers
+last 2 versions
+
+# Specifically support the additional Internet Explorer versions below
+IE 9

@@ -1,0 +1,25 @@
+/**
+ * Media object
+ */
+.Media {
+    @include clearfix();
+
+    > .Media_img {
+        float: left;
+        margin-right: $margin-s;
+
+        > img {
+            display: block;
+        }
+    }
+
+    > .Media_img--right {
+        float: right;
+        margin-left: $margin-s;
+        margin-right: 0;
+    }
+
+    > .Media_body {
+        @include clearfix();
+    }
+}
